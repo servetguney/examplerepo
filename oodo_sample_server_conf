@@ -3,6 +3,6 @@
 admin_passwd = admin
 db_host = 127.0.0.1
 db_port = 5432
-db_user = odooitgs
-db_password = 'KocaeliAskerlik41!'
+db_user = databasename
+db_password = 'SamplePassword!'
 addons_path = /usr/lib/python2.7/dist-packages/openerp/addons

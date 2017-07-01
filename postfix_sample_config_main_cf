@@ -27,8 +27,8 @@ smtpd_relay_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_
 smtpd_tls_security_level = may
 smtp_tls_security_level = may
 smtpd_tls_session_cache_timeout = 3600s
-smtpd_tls_cert_file=/etc/postfix/sasl/itgs_cert.pem
-smtpd_tls_key_file=/etc/postfix/sasl/itgs_key.pem
+smtpd_tls_cert_file=/etc/postfix/sasl/(Name of the pem file).pem
+smtpd_tls_key_file=/etc/postfix/sasl/(Name of the key file).pem
 smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
 tls_random_source = dev:/dev/urandom
 
@@ -39,11 +39,11 @@ smtpd_tls_loglevel = 1
 # See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
 # information on enabling SSL in the smtp client.
 
-myhostname = mail.itgsconsultancy.co.uk
+myhostname = mail.domainname.co.uk
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
 myorigin = /etc/mailname
-mydestination = itgsconsultancy.co.uk,localhost
+mydestination = domainname.co.uk,localhost
 relayhost = 
 mynetworks = 127.0.0.0/8
 mailbox_size_limit = 0
